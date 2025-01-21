@@ -15,14 +15,14 @@
 
     /* Pseudo-element to insert content before the container */
     #container::before {
-      content: "Before content";
+      content: "Before content - ";
       color: #f00; /* Red color */
       font-size: 20px;
     }
 
     /* Pseudo-element to insert content after the container */
     #container::after {
-      content: "After content";
+      content: " - After content";
       color: #f00; /* Red color */
       font-size: 20px;
     }
@@ -30,7 +30,7 @@
 </head>
 <body>
   <div id="container">
-    This is the main container element
+    This is the main content inside the container.
   </div>
 </body>
 </html>
