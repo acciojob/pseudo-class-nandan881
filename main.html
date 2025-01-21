@@ -4,11 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pseudo-elements Example</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Apply margin to the container */
+    #container {
+      margin: 20px;
+      padding: 20px;
+      background-color: #e0e0e0; /* Optional background for visual clarity */
+      font-size: 18px; /* Default font size for container content */
+    }
+
+    /* Pseudo-element to insert content before the container */
+    #container::before {
+      content: "Before content";
+      color: #f00; /* Red color */
+      font-size: 20px;
+    }
+
+    /* Pseudo-element to insert content after the container */
+    #container::after {
+      content: "After content";
+      color: #f00; /* Red color */
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
   <div id="container">
-    This is the main content inside the container
+    This is the main container element
   </div>
 </body>
 </html>
