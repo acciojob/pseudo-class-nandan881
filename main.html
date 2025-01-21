@@ -3,34 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pseudo-elements Example</title>
+  <title>Pseudo-elements with JavaScript</title>
   <style>
-    /* Apply margin to the container */
+    /* Default container style */
     #container {
       margin: 20px;
       padding: 20px;
-      background-color: #e0e0e0; /* Optional background for clarity */
+      background-color: #e0e0e0; /* Optional background color */
       font-size: 18px; /* Default font size for container content */
-    }
-
-    /* Pseudo-element to insert content before the container */
-    #container::before {
-      content: "Before content - "; /* Text before the container */
-      color: #f00; /* Red color */
-      font-size: 20px;
-    }
-
-    /* Pseudo-element to insert content after the container */
-    #container::after {
-      content: " - After content"; /* Text after the container */
-      color: #f00; /* Red color */
-      font-size: 20px;
     }
   </style>
 </head>
 <body>
+  <!-- The container element where text will be inserted before and after -->
   <div id="container">
     This is the main content inside the container.
   </div>
+
+  <script>
+    // Select the container element
+    const container = document.getElementById("container");
+
+    // Add CSS rules dynamically for the ::before pseudo-element
+    const styleBefore = document.createElement("style");
+    styleBefore.innerHTML = `
+      #container::before {
+        content: "Before content - ";
+        color: #f00; /* Red color */
+        font-size: 20px;
+      }
+    `;
+    document.head.appendChild(styleBefore);
+
+    // Add CSS rules dynamically for the ::after pseudo-element
+    const styleAfter = document.createElement("style");
+    styleAfter.innerHTML = `
+      #container::after {
+        content: " - After content";
+        color: #f00; /* Red color */
+        font-size: 20px;
+      }
+    `;
+    document.head.appendChild(styleAfter);
+  </script>
 </body>
 </html>
