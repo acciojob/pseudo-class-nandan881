@@ -17,7 +17,7 @@
 <body>
   <!-- The container element where text will be inserted before and after -->
   <div id="container">
-    This is the main content inside the container.
+    This is the main content inside the container
   </div>
 
   <script>
@@ -28,7 +28,7 @@
     const styleBefore = document.createElement("style");
     styleBefore.innerHTML = `
       #container::before {
-        content: "Before content - ";
+        content: "Before Element ";
         color: #f00; /* Red color */
         font-size: 20px;
       }
@@ -39,7 +39,7 @@
     const styleAfter = document.createElement("style");
     styleAfter.innerHTML = `
       #container::after {
-        content: " - After content";
+        content: "After Element";
         color: #f00; /* Red color */
         font-size: 20px;
       }
