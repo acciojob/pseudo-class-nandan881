@@ -1,0 +1,24 @@
+/* Apply styles to the container */
+#container {
+  margin: 20px;
+  font-size: 16px; /* Adjust font size for container text if needed */
+  position: relative;
+}
+
+/* Add content before the container */
+#container::before {
+  content: "Before Element";
+  color: #f00;
+  font-size: 20px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+/* Add content after the container */
+#container::after {
+  content: "After Element";
+  color: #f00;
+  font-size: 20px;
+  margin-left: 10px;
+  display: inline-block;
+}

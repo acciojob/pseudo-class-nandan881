@@ -3,48 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pseudo-elements with JavaScript</title>
-  <style>
-    /* Default container style */
-    #container {
-      margin: 20px;
-      padding: 20px;
-      background-color: #e0e0e0; /* Optional background color */
-      font-size: 18px; /* Default font size for container content */
-    }
-  </style>
+  <title>Pseudo-Elements</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- The container element where text will be inserted before and after -->
-  <div id="container">
-    This is the main content inside the container
-  </div>
-
-  <script>
-    // Select the container element
-    const container = document.getElementById("container");
-
-    // Add CSS rules dynamically for the ::before pseudo-element
-    const styleBefore = document.createElement("style");
-    styleBefore.innerHTML = `
-      #container::before {
-        content: "Before Element ";
-        color: #f00; /* Red color */
-        font-size: 20px;
-      }
-    `;
-    document.head.appendChild(styleBefore);
-
-    // Add CSS rules dynamically for the ::after pseudo-element
-    const styleAfter = document.createElement("style");
-    styleAfter.innerHTML = `
-      #container::after {
-        content: "After Element";
-        color: #f00; /* Red color */
-        font-size: 20px;
-      }
-    `;
-    document.head.appendChild(styleAfter);
-  </script>
+  <div id="container">This is the main container element</div>
 </body>
 </html>
